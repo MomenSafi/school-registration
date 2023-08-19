@@ -1,0 +1,31 @@
+﻿@model List<Romm>
+
+
+<table>
+	<tr>
+		<th>
+			Room Name
+		</th>
+		<th>
+			Delete
+		</th>
+	</tr>
+
+	@foreach (Romm room in Model)
+
+	{
+		<tr>
+			<td>
+				@room.RoomName
+			</td>
+			<td>
+				<a href="/Romm/DeleteRoom/@room.RoomId">X</a>
+			</td>
+		</tr>
+	}
+
+</table>
+
+
+
+

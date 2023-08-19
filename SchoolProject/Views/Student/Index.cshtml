@@ -1,0 +1,37 @@
+﻿@model List<Student> 
+
+	
+	<table>
+		<tr>
+			<th>
+				Student Name 
+			</th>
+			<th>
+				Student Age
+			</th>
+			<th>
+				Delete
+			</th>
+		</tr>
+
+	@foreach(Student student in Model)
+
+		{
+		<tr>
+			<td>
+				@student.StudentName
+			</td>
+			<td>
+				@student.StudentAge
+			</td>
+			<td>
+				<a href="/Student/DeleteStudent/@student.StudentId">X</a>
+			</td>
+		</tr>
+		}
+	
+	</table>
+
+	
+
+

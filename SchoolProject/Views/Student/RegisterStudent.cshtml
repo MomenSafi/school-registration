@@ -1,0 +1,38 @@
+﻿@model SchoolProject.Models.viewModels.StudentCourseVM
+<div class="container">
+	<form action="RegisterStudent" method="post">
+
+		<div class="row">
+			<div class="col-25">
+				<label for="Student">Students</label>
+			</div>
+			<div class="col-75">
+
+				<select id="StudentId" name="studentId">
+					@foreach(Student student in Model.Students)
+					{
+						<option value="@student.StudentId">@student.StudentName</option>
+					}
+				</select>
+			</div>
+
+			<div class="row">
+				<div class="col-25">
+					<label for="Course">Courses</label>
+				</div>
+				<div class="col-75">
+
+					<select id="CourseId" name="CourseId">
+
+						@foreach (Course course in Model.Courses)
+						{
+							<option value="@course.CourseId">@course.CourseName</option>
+						}
+					</select>
+				</div>
+
+				<div class="row">
+					<input type="submit" value="Register" />
+				</div>
+	</form>
+</div>

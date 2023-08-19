@@ -1,0 +1,37 @@
+﻿@model List<Course>
+
+
+<table>
+	<tr>
+		<th>
+			Course Name
+		</th>
+		<th>
+			Course Capicty
+		</th>
+		<th>
+			Delete
+		</th>
+	</tr>
+
+	@foreach (Course course in Model)
+
+	{
+		<tr>
+			<td>
+				@course.CourseName
+			</td>
+			<td>
+				@course.CourseCapicty
+			</td>
+			<td>
+				<a href="/Course/DeleteCourse/@course.CourseId">X</a>
+			</td>
+		</tr>
+	}
+
+</table>
+
+
+
+
